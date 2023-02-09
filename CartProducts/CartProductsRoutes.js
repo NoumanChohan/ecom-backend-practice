@@ -1,7 +1,7 @@
 import express from "express";
 import Cart, { createCartSchema } from "./CartProductsSchema.js";
 const cartProductsRoutes = express.Router();
-
+console.log("1");
 cartProductsRoutes.post("/api/cartproduct", async (req, res) => {
   const { value, error } = createCartSchema(req.body);
   if (error) res.status().send(error.details[0].message);

@@ -1,6 +1,7 @@
 import express from "express";
 import Registration, { createUserWithJoiSchema } from "./RegisterSchema.js";
 const registerRouter = express.Router();
+console.log("2");
 
 registerRouter.post("/api/register", async (req, res) => {
   console.log(req.body);
