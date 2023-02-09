@@ -13,9 +13,9 @@ app.use(cors());
 app.use(express.json());
 DbConnection;
 
-app.get("/api/cartcart", async (req, res) => {
-  res.send("hellooo");
-});
+// app.get("/api/cartcart", async (req, res) => {
+//   res.send("hellooo");
+// });
 app.use("/", registerRouter);
 app.use("/", loginRouter);
 app.use("/", productRouter);
