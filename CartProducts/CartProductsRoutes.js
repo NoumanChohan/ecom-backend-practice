@@ -17,7 +17,7 @@ cartProductsRoutes.post("/api/cartproduct", async (req, res) => {
 //
 //
 //
-cartProductsRoutes.get("/api/cartproduct", async (req, res) => {
+cartProductsRoutes.get("/", async (req, res) => {
   try {
     const result = await Cart.find();
     res.send(result);

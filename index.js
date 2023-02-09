@@ -18,6 +18,6 @@ app.get("/api/cartcart", async (req, res) => {
 app.use("/", registerRouter);
 app.use("/", loginRouter);
 app.use("/", productRouter);
-app.use("/", cartProductsRoutes);
+app.use("/api", cartProductsRoutes);
 const port = process.env.PORT || 7000;
 app.listen(port, () => console.log("listning on port ", port));
