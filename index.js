@@ -6,6 +6,7 @@ import loginRouter from "./Login/LoginRoutes.js";
 import productRouter from "./Product/ProductRoutes.js";
 import cartProductsRoutes from "./CartProducts/CartProductsRoutes.js";
 import cors from "cors";
+import { foo } from "./Prod.js";
 
 dotenv.config();
 const app = express();
@@ -20,5 +21,6 @@ app.use("/", registerRouter);
 app.use("/", loginRouter);
 app.use("/", productRouter);
 app.use("/", cartProductsRoutes);
+app.use("./Prod.js", foo);
 const port = process.env.PORT || 7000;
 app.listen(port, () => console.log("listning on port ", port));
